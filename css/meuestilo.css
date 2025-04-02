@@ -5,8 +5,17 @@ p{
 
 h3,h4{
     font-family: Arial;
+    color:blue
+}
+h4{
+    color:yellow;
 }
 
 li{
     font-size: 12px;
+}
+
+h1{
+    color:red;
+    background-color: rgb(211, 211, 211);
 }
