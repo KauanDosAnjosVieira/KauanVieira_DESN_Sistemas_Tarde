@@ -1,0 +1,13 @@
+p{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: Arial Narrow;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+
+h1{
+    color:red;
+    background-color: rgb(211, 211, 211);
+}
