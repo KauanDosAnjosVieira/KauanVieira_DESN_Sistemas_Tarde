@@ -1,0 +1,21 @@
+body{
+    background-color: silver;
+}
+
+p{
+    color:green;
+    font-style: italic;
+}
+
+h3,h4{
+    font-family: Arial;
+    color:blue
+}
+h4{
+    color:yellow;
+}
+
+li{
+    font-size: 12px;
+}
+
