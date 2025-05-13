@@ -1,14 +1,12 @@
 <?php
 
 require_once 'conexao.php';
-
 $conexao = conectarBanco();
 
 $idCliente = $_GET['id']?? null;
 $cliente = null;
 $msgErro = "";
 
-//funcao local pra buscar cliente por id
 
 function buscarClientePorId($idCliente, $conexao){
     $stmt = $conexao->prepare("SELECT id_cliente, nome, endereco, telefone, email FROM cliente WHERE id_cliente = :id");
@@ -34,8 +32,8 @@ if ($idCliente && is_numeric($idCliente)){
     <title>Atualizar Cliente</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        function habilidarEdicao(campo){
-            document.getElementById(campo).removeAtribute("readonly");
+        function habilitarEdicao(campo){
+            document.getElementById(campo).removeAttribute("readonly");
         }
     </script>
 </head>
@@ -56,21 +54,20 @@ if ($idCliente && is_numeric($idCliente)){
             <input type="hidden" name="id_cliente" value="<?= htmlspecialchars($cliente['id_cliente']) ?>">
             
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($cliente['nome']) ?>" readonly onclick="habilidarEdicao('nome')">
+            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($cliente['nome']) ?>" readonly onclick="habilitarEdicao('nome')">
 
-            <!--<label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" value="<?= htmlspecialchars($cliente['email']) ?>" readonly onclick="habilidarEdicao('email')">-->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" value="<?= htmlspecialchars($cliente['email']) ?>" readonly onclick="habilitarEdicao('email')">
 
             <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" value="<?= htmlspecialchars($cliente['endereco']) ?>" readonly onclick="habilidarEdicao('endereco')">
+            <input type="text" id="endereco" name="endereco" value="<?= htmlspecialchars($cliente['endereco']) ?>" readonly onclick="habilitarEdicao('endereco')">
 
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" value="<?= htmlspecialchars($cliente['telefone']) ?>" readonly onclick="habilidarEdicao('telefone')">
+            <input type="text" id="telefone" name="telefone" value="<?= htmlspecialchars($cliente['telefone']) ?>" readonly onclick="habilitarEdicao('telefone')">
 
 
             <button type="submit">Atualizar Cliente</button>
         </form>
-
     <?php endif; ?>
 
 </body>
