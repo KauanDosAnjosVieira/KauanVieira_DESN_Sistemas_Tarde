@@ -2,6 +2,6 @@
 xcopy /E /H /Y /I "C:\xampp\htdocs\KauanVieira_PDO"
 cd "C:\Users\kauan_a_vieira\Documents\GitHub\KauanVieira_DESN_Sistemas_Tarde"
 git add .
-git commit -m "Atualizando do conteudo"
+git commit -m "Atualizando conteudo"
 git push origin main
 pause
